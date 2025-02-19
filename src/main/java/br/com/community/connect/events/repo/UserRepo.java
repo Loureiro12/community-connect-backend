@@ -1,0 +1,8 @@
+package br.com.community.connect.events.repo;
+
+import br.com.community.connect.events.model.User;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepo extends CrudRepository<User, Integer> {
+    public User findByEmail(String email);
+}
